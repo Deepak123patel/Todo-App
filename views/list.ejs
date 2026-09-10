@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include("navbar")%>
+    
+
+    <div class="container">
+<h1>Task List Page</h1>
+
+<% for(let task=0;task<result.length;task++){%>
+<ul class="task-list"> 
+    <li class="task-item"> <div class="task-title"><%= result[task].title%></div>
+
+<div class="task-description"> <%= result[task].discription%></div>
+
+<a class="delete-item" href="/delete/<%= result[task]._id%>">Delete</a>
+
+<a class="update-item" href="/update/<%= result[task]._id%>">Update</a
+
+</li>
+
+
+ 
+</ul>
+
+<%}%>
+    </div>
+  </body>
+</html>
